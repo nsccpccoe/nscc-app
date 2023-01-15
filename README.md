@@ -21,10 +21,9 @@ Contributions are **always welcome!**
 
 ## Tech Stack⚙️
 
-- Dart
-- Swift
-- Kotlin
-- Objective-c
+- Flutter
+- Firebase
+- Codemagic
 
 
 ## Demo💥
@@ -32,7 +31,7 @@ Contributions are **always welcome!**
 Run live [NSCC](https://nsccpccoe.web.app/) application.
 
 
-## Members💻
-
-- [@PranavMasekar](https://github.com/PranavMasekar)
-- [@Drontitan](https://github.com/Drontitan)
+## Thanks to all the contributors ❤️
+<a href = "https://github.com/nsccpccoe/nscc-app/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=nsccpccoe/nscc-app"/>
+</a>
