@@ -10,6 +10,14 @@ class AppRoutes {
       name: RoutesNames.homeScreen,
       page: () => HomeScreen(),
     ),
+    GetPage(
+      name: RoutesNames.loginScreen,
+      page: () => HomeScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.signupScreen,
+      page: () => HomeScreen(),
+    ),
     
   ];
 }
