@@ -26,6 +26,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           initialRoute: RoutesNames.homeScreen,
           getPages: AppRoutes.routes,
+          theme: ThemeData(
+            fontFamily: "Poppins",
+          ),
         );
       },
     );
