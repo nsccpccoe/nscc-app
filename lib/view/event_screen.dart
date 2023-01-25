@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 import 'package:nscc_app/widgets/cyan_gradient.dart';
 import 'package:lottie/lottie.dart';
+import 'package:nscc_app/widgets/gradient_border.dart';
 
 class EventScreen extends StatelessWidget {
   const EventScreen({super.key});
@@ -119,17 +120,38 @@ class EventScreen extends StatelessWidget {
                     gradient: AppColors.cyanGradient,
                   ),
                   SizedBox(
-                    height: 3.h,
-                  ),
-                  Text(
-                    "1. Unleash your web development skills in our 8-day hackathon! \n 2. Explore trending tech, build and showcase your website, \n 3. win prizes and goodies.",
-                    style: MyTextStyles.poppins400
-                        .copyWith(color: AppColors.greyColor),
+                    height: 10.h,
                   ),
                   Center(
-                    child: Lottie.asset("assets/animation/animation_rupee.json"),
+                    child: UnicornOutlineButton(
+                      strokeWidth: 2,
+                      radius: 20.r,
+                      gradient: AppColors.cyanGradient,
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          Text(
+                            "First Year",
+                            style: MyTextStyles.poppins400.copyWith(color: AppColors.whiteColor),
+                          ),
+                          SizedBox(
+                            height: 85.h,
+                          ),
+                          Text(
+                            "Rs 500/-",
+                            style: MyTextStyles.poppins400.copyWith(fontSize: 20.sp, color: AppColors.whiteColor),
+                          ),
+                        ],
+                      ),
+                      onPressed: () {},
+                    ),
                   ),
                 ],
+                // Center(
+                //   child: Lottie.asset("assets/animation/animation_rupee.json"),
+                // ),
               ),
             ),
           ),

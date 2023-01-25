@@ -42,6 +42,21 @@ class HomeScreen extends StatelessWidget {
                   style: MyTextStyles.poppins600,
                 ),
               ),
+              SizedBox(
+                height: 100.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(
+                    RoutesNames.registrationScreen,
+                  );
+                },
+                child: CyanGradient(
+                  "REGISTRATION",
+                  gradient: AppColors.cyanGradient,
+                  style: MyTextStyles.poppins600,
+                ),
+              ),
             ],
           ),
         ),
