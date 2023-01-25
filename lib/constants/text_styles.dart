@@ -29,7 +29,7 @@ class MyTextStyles {
   static TextStyle get poppins400 => TextStyle(
         fontFamily: poppinsFont,
         fontWeight: FontWeight.w400,
-        fontSize: 10.sp,
+        fontSize: 14.sp,
         color: AppColors.greyColor,
       );
 }

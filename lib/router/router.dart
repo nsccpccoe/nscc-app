@@ -2,6 +2,7 @@
 
 import 'package:get/get.dart';
 import 'package:nscc_app/router/routes_names.dart';
+import 'package:nscc_app/view/event_screen.dart';
 import 'package:nscc_app/view/home_screen.dart';
 
 class AppRoutes {
@@ -9,6 +10,10 @@ class AppRoutes {
     GetPage(
       name: RoutesNames.homeScreen,
       page: () => HomeScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.eventScreen,
+      page: () => EventScreen(),
     ),
   ];
 }
