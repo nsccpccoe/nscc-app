@@ -10,5 +10,6 @@ class AppRoutes {
       name: RoutesNames.homeScreen,
       page: () => HomeScreen(),
     ),
+    
   ];
 }
