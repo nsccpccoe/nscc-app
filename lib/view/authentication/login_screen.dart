@@ -51,15 +51,18 @@ class LoginScreen extends StatelessWidget {
                       key: _formkey,
                       child: Column(
                         children: [
-                          // HeadLine(),
                           SvgPicture.asset(
                             'assets/svg/site.svg',
                             width: width * 0.6,
                           ),
+                          SizedBox(
+                            height: 25,
+                          ),
                           myInpField(
-                            label: "Phone number, username, or email",
+                            label: "Email",
                             controller: _username,
                             validate: MyValidators.v_name,
+                            keytype: TextInputType.emailAddress,
                           ),
                           myInpField(
                             label: "Password",
