@@ -67,7 +67,7 @@ class EventScreen extends StatelessWidget {
                     height: 5.h,
                   ),
                   CyanGradient(
-                    "22/01/2023 8:00 AM - 29/01/2023 1159 PM IST",
+                    "22/01/2023 8:00 AM - 29/01/2023 11:59 PM IST",
                     style: MyTextStyles.poppins500.copyWith(fontSize: 12.sp),
                     gradient: AppColors.cyanGradient,
                   ),
@@ -134,14 +134,19 @@ class EventScreen extends StatelessWidget {
                           ),
                           Text(
                             "First Year",
-                            style: MyTextStyles.poppins400.copyWith(color: AppColors.whiteColor),
+                            style: MyTextStyles.poppins400
+                                .copyWith(color: AppColors.whiteColor),
                           ),
-                          SizedBox(
-                            height: 85.h,
+                          Center(
+                            child: Lottie.network(
+                              "https://assets7.lottiefiles.com/packages/lf20_dfnomwab/data.json",
+                              height: 95.h,
+                            ),
                           ),
                           Text(
                             "Rs 500/-",
-                            style: MyTextStyles.poppins400.copyWith(fontSize: 20.sp, color: AppColors.whiteColor),
+                            style: MyTextStyles.poppins400.copyWith(
+                                fontSize: 20.sp, color: AppColors.whiteColor),
                           ),
                         ],
                       ),
@@ -149,9 +154,6 @@ class EventScreen extends StatelessWidget {
                     ),
                   ),
                 ],
-                // Center(
-                //   child: Lottie.asset("assets/animation/animation_rupee.json"),
-                // ),
               ),
             ),
           ),

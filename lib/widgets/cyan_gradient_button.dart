@@ -4,10 +4,14 @@ import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 
 class CyanGradientButton extends StatelessWidget {
-  double height;
-  double width;
+  final double height;
+  final double width;
   String text;
-   CyanGradientButton({super.key, required this.height, required this.width, required this.text});
+  CyanGradientButton(
+      {super.key,
+      required this.height,
+      required this.width,
+      required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +24,9 @@ class CyanGradientButton extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          text, 
-          style: MyTextStyles.poppins500.copyWith(fontSize: 14.sp, color: AppColors.greyAccentColor),
+          text,
+          style: MyTextStyles.poppins500
+              .copyWith(fontSize: 14.sp, color: AppColors.greyAccentColor),
         ),
       ),
     );

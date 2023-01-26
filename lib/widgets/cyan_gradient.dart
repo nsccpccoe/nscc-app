@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+// TODO : Name should be GradientText
 class CyanGradient extends StatelessWidget {
   const CyanGradient(
     this.text, {
+    super.key,
     required this.gradient,
     this.style,
   });
