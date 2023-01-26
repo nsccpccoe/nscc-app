@@ -22,6 +22,7 @@ class RegistrationScreen extends StatelessWidget {
         return Scaffold(
           extendBodyBehindAppBar: true,
           appBar: AppBar(
+            // TODO : Create a commong app bar widget called as MyAppBar()
             elevation: 0,
             backgroundColor: Colors.transparent,
             leading: Icon(
@@ -118,6 +119,7 @@ class RegistrationScreen extends StatelessWidget {
                             height: 10.h,
                           ),
                           RegistrationTitleText(text: "Gender"),
+                          // TODO : This is drop down not an text field
                           myInpField(
                             label: "Enter Gender",
                             controller: controller.genderController,
@@ -134,6 +136,7 @@ class RegistrationScreen extends StatelessWidget {
                             height: 10.h,
                           ),
                           RegistrationTitleText(text: "Graduation Year"),
+                          // TODO : Give max length
                           myInpField(
                             label: "Enter Graduation Year",
                             controller: controller.graduationYearController,
@@ -142,7 +145,8 @@ class RegistrationScreen extends StatelessWidget {
                           SizedBox(
                             height: 10.h,
                           ),
-                          RegistrationTitleText(text: "HackerRank Profile Link"),
+                          RegistrationTitleText(
+                              text: "HackerRank Profile Link"),
                           myInpField(
                             label: "Enter HackerRank Profile Link",
                             controller: controller.hackerRankLinkController,
@@ -153,6 +157,7 @@ class RegistrationScreen extends StatelessWidget {
                     SizedBox(
                       height: 45.h,
                     ),
+                    // TODO : Shift this onTap implementation inside CyanGradientButton
                     GestureDetector(
                       onTap: () {},
                       child: CyanGradientButton(

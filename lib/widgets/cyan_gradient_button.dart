@@ -3,10 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 
+// TODO : Change name to GradientButton
+// TODO : Take input of gradient as done in Gradient Text
+// TODO : Also take input named as VoidcallBack ontap and wrap container with GestureDetector and assign this ontap to it
 class CyanGradientButton extends StatelessWidget {
   final double height;
   final double width;
-  String text;
+  final String text;
   CyanGradientButton(
       {super.key,
       required this.height,

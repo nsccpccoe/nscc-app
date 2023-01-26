@@ -8,6 +8,7 @@ import 'package:lottie/lottie.dart';
 import 'package:nscc_app/widgets/gradient_border.dart';
 import 'package:get/get.dart';
 
+// TODO : Maintain folder structure , create Event details folder and place all these files inside it
 class EventScreen extends StatelessWidget {
   const EventScreen({super.key});
 
@@ -16,6 +17,7 @@ class EventScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        // TODO : For such type of appbar create an widget called SecondaryAppBar() having parameter of title
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: GestureDetector(
