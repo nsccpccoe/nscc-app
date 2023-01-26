@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:nscc_app/constants/buttons.dart';
 import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/footer.dart';
 import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 import 'package:nscc_app/constants/validators.dart';
 import 'package:nscc_app/router/routes_names.dart';
-import 'package:nscc_app/services/auth.dart';
+import 'package:nscc_app/widgets/gradient_button.dart';
 import 'package:nscc_app/widgets/login_widgets.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
         child: Container(
           alignment: Alignment.center,
           padding: EdgeInsets.symmetric(
-            horizontal: 16,
+            horizontal: 16.h,
           ),
           decoration: BoxDecoration(
             gradient: AppColors.bgGradient,
@@ -52,18 +52,15 @@ class LoginScreen extends StatelessWidget {
                       key: _formkey,
                       child: Column(
                         children: [
+                          // HeadLine(),
                           SvgPicture.asset(
                             'assets/svg/site.svg',
                             width: width * 0.6,
                           ),
-                          SizedBox(
-                            height: 25,
-                          ),
                           myInpField(
-                            label: "Email",
+                            label: "Phone number, username, or email",
                             controller: _username,
                             validate: MyValidators.v_name,
-                            keytype: TextInputType.emailAddress,
                           ),
                           myInpField(
                             label: "Password",
@@ -85,22 +82,14 @@ class LoginScreen extends StatelessWidget {
                                   style: MyTextStyles.poppins500,
                                 )),
                           ),
-                          PrimaryBtn(
-                            label: "Login",
-                            onpress: () {
-                              //  TODO: Login Function call
-                              if (_formkey.currentState!.validate()) {
-                                // TODO: Login msg
-                                AuthMethods().signIn(
-                                  context: context,
-                                  email: _username.text,
-                                  password: _password.text,
-                                );
-                              } else {
-                                // print("failed");
-                              }
-                            },
+                          GradientButton(
+                            onTap: () {},
+                            height: 30.h,
+                            width: 80.w,
+                            text: "Login",
+                            gradient: AppColors.cyanGradient,
                           ),
+
                           SizedBox(height: 10),
                           OrLine(),
                           SizedBox(height: 25),

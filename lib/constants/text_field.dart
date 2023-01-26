@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 
@@ -19,13 +20,13 @@ Widget myInpField(
     padding: EdgeInsets.symmetric(
       horizontal: 5,
     ),
-    width: width,
-    height: height,
+    width: width.w,
+    height: height.h,
     decoration: BoxDecoration(
       color: AppColors.whiteColor.withOpacity(0.95),
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(8.r),
     ),
-    margin: EdgeInsets.symmetric(horizontal: hr, vertical: vr),
+    margin: EdgeInsets.symmetric(horizontal: hr.w, vertical: vr.h),
     child: TextFormField(
       validator: validate,
       controller: controller,
@@ -37,7 +38,7 @@ Widget myInpField(
         border: InputBorder.none,
         hintText: label,
         hintStyle: MyTextStyles.customStyle(
-          fontsize: 14,
+          fontsize: 14.sp,
           fontWeight: FontWeight.w500,
         ),
         counterText: "",
@@ -45,7 +46,7 @@ Widget myInpField(
       ),
       inputFormatters:
           digitsonly ? [FilteringTextInputFormatter.digitsOnly] : [],
-      keyboardType: keytype,
+      keyboardType: digitsonly ? TextInputType.number : keytype,
       maxLength: maxlen,
     ),
   );

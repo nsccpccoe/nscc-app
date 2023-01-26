@@ -1,7 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nscc_app/constants/text_styles.dart';
-import 'package:nscc_app/services/auth.dart';
 
 class AuthIcons extends StatelessWidget {
   const AuthIcons({super.key});
@@ -12,9 +12,8 @@ class AuthIcons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         GestureDetector(
-          onTap: () async {
+          onTap: () {
             // Google Sign In method
-            await AuthMethods().signInWithGoogle();
           },
           child: SvgPicture.asset(
             'assets/svg/google.svg',
