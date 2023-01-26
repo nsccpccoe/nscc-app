@@ -4,8 +4,6 @@ import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/footer.dart';
 import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
-import 'package:nscc_app/main.dart';
-import 'package:nscc_app/view/authentication/login_screen.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({super.key});
@@ -15,7 +13,6 @@ class SignupScreen extends StatelessWidget {
   final TextEditingController _cnfpass = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: GestureDetector(
@@ -42,7 +39,7 @@ class SignupScreen extends StatelessWidget {
                   padding: EdgeInsets.all(10),
                   child: Icon(
                     Icons.arrow_back_ios_new,
-                    color: Colors.white,
+                    color: AppColors.whiteColor,
                   ),
                 ),
               ),
@@ -55,7 +52,7 @@ class SignupScreen extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Color(0xffffffff).withOpacity(0.05),
+                      color: AppColors.bgWhite,
                     ),
                     child: Column(
                       children: [
