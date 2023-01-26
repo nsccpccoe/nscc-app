@@ -50,7 +50,7 @@ class EventScreen extends StatelessWidget {
                   SizedBox(
                     height: 15.h,
                   ),
-                  CyanGradient(
+                  GradientText(
                     "WebXplore",
                     style: MyTextStyles.poppins700.copyWith(fontSize: 30.sp),
                     gradient: AppColors.cyanGradient,
@@ -66,7 +66,7 @@ class EventScreen extends StatelessWidget {
                   SizedBox(
                     height: 5.h,
                   ),
-                  CyanGradient(
+                  GradientText(
                     "22/01/2023 8:00 AM - 29/01/2023 11:59 PM IST",
                     style: MyTextStyles.poppins500.copyWith(fontSize: 12.sp),
                     gradient: AppColors.cyanGradient,
@@ -82,7 +82,7 @@ class EventScreen extends StatelessWidget {
                   SizedBox(
                     height: 10.h,
                   ),
-                  CyanGradient(
+                  GradientText(
                     "Description",
                     style: MyTextStyles.poppins700,
                     gradient: AppColors.cyanGradient,
@@ -98,7 +98,7 @@ class EventScreen extends StatelessWidget {
                   SizedBox(
                     height: 10.h,
                   ),
-                  CyanGradient(
+                  GradientText(
                     "Rules",
                     style: MyTextStyles.poppins700,
                     gradient: AppColors.cyanGradient,
@@ -114,7 +114,7 @@ class EventScreen extends StatelessWidget {
                   SizedBox(
                     height: 10.h,
                   ),
-                  CyanGradient(
+                  GradientText(
                     "Prizes & Goodies",
                     style: MyTextStyles.poppins700,
                     gradient: AppColors.cyanGradient,

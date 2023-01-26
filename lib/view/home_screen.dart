@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 100.h,
               ),
-              CyanGradient(
+              GradientText(
                 "HOME SCREEN",
                 gradient: AppColors.cyanGradient,
                 style: MyTextStyles.poppins700,
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                     RoutesNames.eventScreen,
                   );
                 },
-                child: CyanGradient(
+                child: GradientText(
                   "EVENTS",
                   gradient: AppColors.cyanGradient,
                   style: MyTextStyles.poppins600,
@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                     RoutesNames.registrationScreen,
                   );
                 },
-                child: CyanGradient(
+                child: GradientText(
                   "REGISTRATION",
                   gradient: AppColors.cyanGradient,
                   style: MyTextStyles.poppins600,

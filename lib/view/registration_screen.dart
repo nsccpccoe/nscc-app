@@ -62,7 +62,7 @@ class RegistrationScreen extends StatelessWidget {
                             style: MyTextStyles.poppins400
                                 .copyWith(color: AppColors.whiteColor),
                           ),
-                          CyanGradient(
+                          GradientText(
                             "CodeHive Contest",
                             style: MyTextStyles.poppins700
                                 .copyWith(fontSize: 25.sp),
