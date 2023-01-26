@@ -84,7 +84,7 @@ class EventScreen extends StatelessWidget {
                     "- Unleash your web development skills in our 8-day hackathon! \n- Explore trending tech, build and showcase your website, \n- win prizes and goodies.",
                     textAlign: TextAlign.justify,
                     style: MyTextStyles.poppins400
-                        .copyWith(color: AppColors.greyColor, fontSize: 14.sp),
+                        .copyWith(color: AppColors.greyColor),
                   ),
                   SizedBox(
                     height: 10.h,
