@@ -26,7 +26,7 @@ Widget myInpField(
       color: AppColors.whiteColor.withOpacity(0.95),
       borderRadius: BorderRadius.circular(8.r),
     ),
-    margin: EdgeInsets.symmetric(horizontal: hr, vertical: vr),
+    margin: EdgeInsets.symmetric(horizontal: hr.w, vertical: vr.h),
     child: TextFormField(
       validator: validate,
       controller: controller,
@@ -46,7 +46,7 @@ Widget myInpField(
       ),
       inputFormatters:
           digitsonly ? [FilteringTextInputFormatter.digitsOnly] : [],
-      keyboardType: keytype,
+      keyboardType: digitsonly ? TextInputType.number : keytype,
       maxLength: maxlen,
     ),
   );

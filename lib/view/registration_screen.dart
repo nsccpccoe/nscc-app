@@ -113,6 +113,7 @@ class RegistrationScreen extends StatelessWidget {
                             height: 10.h,
                           ),
                           RegistrationTitleText(text: "Gender"),
+                          SizedBox(height: 8.h),
                           Container(
                             height: 48.h,
                             width: 285.w,
@@ -125,6 +126,7 @@ class RegistrationScreen extends StatelessWidget {
                               child: DropdownButton(
                                 isExpanded: true,
                                 underline: SizedBox(),
+                                borderRadius: BorderRadius.circular(8.r),
                                 items: controller.genderList
                                     .map(
                                       (e) => DropdownMenuItem(
@@ -139,8 +141,9 @@ class RegistrationScreen extends StatelessWidget {
                                 value: controller.selectedValue,
                                 hint: Text(
                                   "Select Gender",
-                                  style: MyTextStyles.poppins500
-                                      .copyWith(fontSize: 14.sp, color: AppColors.greyColor),
+                                  style: MyTextStyles.poppins500.copyWith(
+                                      fontSize: 14.sp,
+                                      color: AppColors.greyColor),
                                 ),
                               ),
                             ),
