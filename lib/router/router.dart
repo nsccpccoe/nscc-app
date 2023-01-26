@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:nscc_app/router/routes_names.dart';
 import 'package:nscc_app/view/authentication/login_screen.dart';
 import 'package:nscc_app/view/authentication/signup_screen.dart';
-import 'package:nscc_app/view/event_screen.dart';
+import 'package:nscc_app/view/event_details/event_screen.dart';
 import 'package:nscc_app/view/home_screen.dart';
 import 'package:nscc_app/view/registration_screen.dart';
 

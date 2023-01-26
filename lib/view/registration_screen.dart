@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:nscc_app/constants/colors.dart';
+import 'package:nscc_app/constants/footer.dart';
 import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 import 'package:nscc_app/controllers/registration_controller.dart';
+import 'package:nscc_app/router/routes_names.dart';
 import 'package:nscc_app/widgets/gradient_text.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nscc_app/widgets/cyan_gradient_button.dart';
+import 'package:nscc_app/widgets/gradient_button.dart';
+import 'package:nscc_app/widgets/my_appbar.dart';
 import 'package:nscc_app/widgets/registration_title_text.dart';
 
 class RegistrationScreen extends StatelessWidget {
@@ -21,19 +23,7 @@ class RegistrationScreen extends StatelessWidget {
       builder: (controller) {
         return Scaffold(
           extendBodyBehindAppBar: true,
-          appBar: AppBar(
-            // TODO : Create a commong app bar widget called as MyAppBar()
-            elevation: 0,
-            backgroundColor: Colors.transparent,
-            leading: Icon(
-              Icons.menu,
-            ),
-            title: SvgPicture.asset(
-              "assets/svg/nscc_club_name.svg",
-              width: 170.w,
-              height: 35.h,
-            ),
-          ),
+          appBar: MyAppBar(),
           body: Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
@@ -48,7 +38,7 @@ class RegistrationScreen extends StatelessWidget {
                       height: 45.h,
                     ),
                     Container(
-                      height: 800.h,
+                      height: 750.h,
                       width: 320.w,
                       decoration: BoxDecoration(
                         color: AppColors.whiteColor.withOpacity(0.05),
@@ -79,7 +69,11 @@ class RegistrationScreen extends StatelessWidget {
                             height: 15.h,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.toNamed(
+                                RoutesNames.eventScreen,
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: AppColors.darkBlueColor,
                               padding: EdgeInsets.symmetric(
@@ -119,10 +113,37 @@ class RegistrationScreen extends StatelessWidget {
                             height: 10.h,
                           ),
                           RegistrationTitleText(text: "Gender"),
-                          // TODO : This is drop down not an text field
-                          myInpField(
-                            label: "Enter Gender",
-                            controller: controller.genderController,
+                          Container(
+                            height: 48.h,
+                            width: 285.w,
+                            decoration: BoxDecoration(
+                              color: AppColors.whiteColor.withOpacity(0.95),
+                              borderRadius: BorderRadius.circular(8.r),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 15.w),
+                              child: DropdownButton(
+                                isExpanded: true,
+                                underline: SizedBox(),
+                                items: controller.genderList
+                                    .map(
+                                      (e) => DropdownMenuItem(
+                                        child: Text(e),
+                                        value: e,
+                                      ),
+                                    )
+                                    .toList(),
+                                onChanged: (value) {
+                                  controller.updateDropDown(value!);
+                                },
+                                value: controller.selectedValue,
+                                hint: Text(
+                                  "Select Gender",
+                                  style: MyTextStyles.poppins500
+                                      .copyWith(fontSize: 14.sp, color: AppColors.greyColor),
+                                ),
+                              ),
+                            ),
                           ),
                           SizedBox(
                             height: 10.h,
@@ -136,11 +157,11 @@ class RegistrationScreen extends StatelessWidget {
                             height: 10.h,
                           ),
                           RegistrationTitleText(text: "Graduation Year"),
-                          // TODO : Give max length
                           myInpField(
                             label: "Enter Graduation Year",
                             controller: controller.graduationYearController,
                             digitsonly: true,
+                            maxlen: 4,
                           ),
                           SizedBox(
                             height: 10.h,
@@ -157,15 +178,17 @@ class RegistrationScreen extends StatelessWidget {
                     SizedBox(
                       height: 45.h,
                     ),
-                    // TODO : Shift this onTap implementation inside CyanGradientButton
-                    GestureDetector(
+                    GradientButton(
                       onTap: () {},
-                      child: CyanGradientButton(
-                        height: 50.h,
-                        width: 280.w,
-                        text: "Register for CodeHive Contest",
-                      ),
+                      height: 50.h,
+                      width: 280.w,
+                      text: "Register for CodeHive Contest",
+                      gradient: AppColors.cyanGradient,
                     ),
+                    SizedBox(
+                      height: 40.h,
+                    ),
+                    Footer(),
                   ],
                 ),
               ),

@@ -8,7 +8,7 @@ import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 import 'package:nscc_app/constants/validators.dart';
 import 'package:nscc_app/router/routes_names.dart';
-import 'package:nscc_app/widgets/cyan_gradient_button.dart';
+import 'package:nscc_app/widgets/gradient_button.dart';
 import 'package:nscc_app/widgets/login_widgets.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -82,8 +82,13 @@ class LoginScreen extends StatelessWidget {
                                   style: MyTextStyles.poppins500,
                                 )),
                           ),
-                          CyanGradientButton(
-                              height: 30.h, width: 80.w, text: "Login"),
+                          GradientButton(
+                            onTap: () {},
+                            height: 30.h,
+                            width: 80.w,
+                            text: "Login",
+                            gradient: AppColors.cyanGradient,
+                          ),
 
                           SizedBox(height: 10),
                           OrLine(),

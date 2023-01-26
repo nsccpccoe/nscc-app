@@ -4,7 +4,7 @@ import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/footer.dart';
 import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
-import 'package:nscc_app/widgets/cyan_gradient_button.dart';
+import 'package:nscc_app/widgets/gradient_button.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({super.key});
@@ -90,7 +90,13 @@ class SignupScreen extends StatelessWidget {
                         SizedBox(
                           height: 25,
                         ),
-                        CyanGradientButton(height: 30.h, width: 80.w, text: "Sign Up"),
+                        GradientButton(
+                          onTap: () {},
+                          height: 30.h,
+                          width: 80.w,
+                          text: "Sign Up",
+                          gradient: AppColors.cyanGradient,
+                        ),
                       ],
                     ),
                   ),
