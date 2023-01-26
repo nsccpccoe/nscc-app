@@ -2,6 +2,8 @@
 
 import 'package:get/get.dart';
 import 'package:nscc_app/router/routes_names.dart';
+import 'package:nscc_app/view/authentication/login_screen.dart';
+import 'package:nscc_app/view/authentication/signup_screen.dart';
 import 'package:nscc_app/view/home_screen.dart';
 
 class AppRoutes {
@@ -10,5 +12,14 @@ class AppRoutes {
       name: RoutesNames.homeScreen,
       page: () => HomeScreen(),
     ),
+    GetPage(
+      name: RoutesNames.loginScreen,
+      page: () => LoginScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.signupScreen,
+      page: () => SignupScreen(),
+    ),
+    
   ];
 }

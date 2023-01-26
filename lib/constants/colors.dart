@@ -26,4 +26,7 @@ class AppColors {
   static Color whiteColor = Color(0xffFFFFFF).withOpacity(0.9);
 
   static Color darkGreyColor = Color(0xff000000).withOpacity(0.27);
+
+  static const Color lightBlue = Color(0xff8DEBFF);
+  static Color bgWhite = Color(0xffffffff).withOpacity(0.05);
 }
