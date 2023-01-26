@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:nscc_app/constants/colors.dart';
+import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 import 'package:nscc_app/controllers/registration_controller.dart';
-import 'package:nscc_app/widgets/cyan_gradient.dart';
+import 'package:nscc_app/widgets/gradient_text.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nscc_app/widgets/cyan_gradient_button.dart';
-import 'package:nscc_app/widgets/registration_form_field.dart';
+import 'package:nscc_app/widgets/registration_title_text.dart';
 
 class RegistrationScreen extends StatelessWidget {
   RegistrationScreen({super.key});
@@ -46,10 +47,10 @@ class RegistrationScreen extends StatelessWidget {
                       height: 45.h,
                     ),
                     Container(
-                      height: 650.h,
+                      height: 800.h,
                       width: 320.w,
                       decoration: BoxDecoration(
-                        color: AppColors.whiteColor.withOpacity(0.2),
+                        color: AppColors.whiteColor.withOpacity(0.05),
                         borderRadius: BorderRadius.circular(8.r),
                       ),
                       child: Column(
@@ -99,49 +100,51 @@ class RegistrationScreen extends StatelessWidget {
                           SizedBox(
                             height: 25.h,
                           ),
-                          RegistrationFormField(
-                            hintText: "Enter Full Name",
-                            labelText: "Full Name",
+                          RegistrationTitleText(text: "Full Name"),
+                          myInpField(
+                            label: "Enter Full Name",
                             controller: controller.nameController,
                           ),
                           SizedBox(
                             height: 10.h,
                           ),
-                          RegistrationFormField(
-                            hintText: "Enter Email ID",
-                            labelText: "Email ID",
+                          RegistrationTitleText(text: "Email ID"),
+                          myInpField(
+                            label: "Enter Email ID",
                             controller: controller.emailController,
+                            keytype: TextInputType.emailAddress,
                           ),
                           SizedBox(
                             height: 10.h,
                           ),
-                          RegistrationFormField(
-                            hintText: "Enter Gender",
-                            labelText: "Gender",
+                          RegistrationTitleText(text: "Gender"),
+                          myInpField(
+                            label: "Enter Gender",
                             controller: controller.genderController,
                           ),
                           SizedBox(
                             height: 10.h,
                           ),
-                          RegistrationFormField(
-                            hintText: "Enter College Name",
-                            labelText: "College Name",
+                          RegistrationTitleText(text: "College Name"),
+                          myInpField(
+                            label: "Enter College Name",
                             controller: controller.collegeNameController,
                           ),
                           SizedBox(
                             height: 10.h,
                           ),
-                          RegistrationFormField(
-                            hintText: "Enter Graduation Year",
-                            labelText: "Graduation Year",
+                          RegistrationTitleText(text: "Graduation Year"),
+                          myInpField(
+                            label: "Enter Graduation Year",
                             controller: controller.graduationYearController,
+                            digitsonly: true,
                           ),
                           SizedBox(
                             height: 10.h,
                           ),
-                          RegistrationFormField(
-                            hintText: "Enter HackerRank Profile Link",
-                            labelText: "HackerRank Profile Link",
+                          RegistrationTitleText(text: "HackerRank Profile Link"),
+                          myInpField(
+                            label: "Enter HackerRank Profile Link",
                             controller: controller.hackerRankLinkController,
                           ),
                         ],

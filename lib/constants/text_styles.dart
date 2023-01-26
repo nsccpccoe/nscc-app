@@ -20,16 +20,29 @@ class MyTextStyles {
       );
 
   static TextStyle get poppins500 => TextStyle(
-    fontFamily: poppinsFont,
-    fontWeight: FontWeight.w500,
-    fontSize: 10.sp,
-    color: AppColors.whiteColor,
-  );
+        fontFamily: poppinsFont,
+        fontWeight: FontWeight.w500,
+        fontSize: 10.sp,
+        color: AppColors.whiteColor,
+      );
 
   static TextStyle get poppins400 => TextStyle(
         fontFamily: poppinsFont,
         fontWeight: FontWeight.w400,
-        fontSize: 14.sp,
+        fontSize: 10.sp,
         color: AppColors.greyColor,
       );
+
+  static TextStyle customStyle({
+    FontWeight fontWeight = FontWeight.w400,
+    double fontsize = 10,
+    Color fontcolor = AppColors.greyColor,
+  }) {
+    return TextStyle(
+      fontFamily: poppinsFont,
+      fontWeight: fontWeight,
+      fontSize: fontsize.sp,
+      color: fontcolor,
+    );
+  }
 }

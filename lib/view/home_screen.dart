@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 import 'package:nscc_app/router/routes_names.dart';
-import 'package:nscc_app/widgets/cyan_gradient.dart';
+import 'package:nscc_app/widgets/gradient_text.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {

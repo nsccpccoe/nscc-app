@@ -3,9 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nscc_app/constants/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nscc_app/constants/text_styles.dart';
-import 'package:nscc_app/widgets/cyan_gradient.dart';
+import 'package:nscc_app/widgets/gradient_text.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nscc_app/widgets/gradient_border.dart';
+import 'package:get/get.dart';
 
 class EventScreen extends StatelessWidget {
   const EventScreen({super.key});
@@ -17,8 +18,13 @@ class EventScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: Icon(
-          Icons.arrow_back,
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: Icon(
+            Icons.arrow_back,
+          ),
         ),
         title: Text(
           "Pandora Tech Festival",
@@ -91,9 +97,10 @@ class EventScreen extends StatelessWidget {
                     height: 3.h,
                   ),
                   Text(
-                    "- Unleash your web development skills in our 8-day hackathon! \n - Explore trending tech, build and showcase your website, \n - win prizes and goodies.",
+                    "- Unleash your web development skills in our 8-day hackathon! \n- Explore trending tech, build and showcase your website, \n- win prizes and goodies.",
+                    textAlign: TextAlign.justify,
                     style: MyTextStyles.poppins400
-                        .copyWith(color: AppColors.greyColor),
+                        .copyWith(color: AppColors.greyColor, fontSize: 14.sp),
                   ),
                   SizedBox(
                     height: 10.h,
@@ -107,7 +114,7 @@ class EventScreen extends StatelessWidget {
                     height: 3.h,
                   ),
                   Text(
-                    "1. Unleash your web development skills in our 8-day hackathon! \n 2. Explore trending tech, build and showcase your website, \n 3. win prizes and goodies.",
+                    "1. Unleash your web development skills in our 8-day hackathon! \n2. Explore trending tech, build and showcase your website, \n3. win prizes and goodies.",
                     style: MyTextStyles.poppins400
                         .copyWith(color: AppColors.greyColor),
                   ),
