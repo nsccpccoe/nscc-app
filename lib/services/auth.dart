@@ -5,10 +5,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 // ;
 
 class AuthMethods {
-  //  UserCredential user = FirebaseAuth.instance;
-  // AuthMethods(this._auth);
-  // Stream<User?> get authStateChanges => _auth.authStateChanges();
-
   Future<void> signInWithGoogle() async {
     //first trigger authentication
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
@@ -26,11 +22,6 @@ class AuthMethods {
 
         print(firebaseUser.user!.email);
         print(firebaseUser.user!.displayName);
-        // if (firebaseUser.user != null) {
-        // Check is already sign up
-
-        // }
-        // return firebaseUser;
       } catch (e) {
         print(e);
       }
@@ -51,7 +42,7 @@ class AuthMethods {
         email: email.trim(),
         password: password.trim(),
       );
-      print("fonr");
+
       print(user.user!.email);
     } on FirebaseAuthException catch (e) {
       print(e.code);
@@ -77,21 +68,20 @@ class AuthMethods {
     final _username = email.replaceAll(RegExp(r'@(\w*)\.(\w*)'), "").trim();
 
     try {
-      UserCredential user = await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(
-              email: email.trim(), password: password.trim());
+      UserCredential user =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email.trim(),
+        password: password.trim(),
+      );
+      print(user.user!.emailVerified);
+      print(user.user!.uid);
       Map<String, dynamic> _userdata = {
-        'username': _username,
-        'useremail': email.trim(),
-        'displayname': fullname.trim(),
-        'followerList': {},
-        'address': '',
-        'gender': '',
-        'mobileNumber': '',
-        'privacy': "Everyone",
+        'fullname': _username,
+        'emailId': email.trim(),
       };
+      print(_userdata);
     } on FirebaseAuthException catch (e) {
-      print(e.message);
+      // print(e.message);
       ScaffoldMessenger.of(context)
           .showSnackBar(const SnackBar(content: Text("Email Already in Use")));
     }

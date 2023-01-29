@@ -14,7 +14,11 @@ class AuthIcons extends StatelessWidget {
         GestureDetector(
           onTap: () async {
             // Google Sign In method
-            await AuthMethods().signInWithGoogle();
+            try {
+              await AuthMethods().signInWithGoogle();
+            } catch (e) {
+              print(e.toString());
+            }
           },
           child: SvgPicture.asset(
             'assets/svg/google.svg',

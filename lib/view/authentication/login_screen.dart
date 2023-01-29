@@ -8,6 +8,7 @@ import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 import 'package:nscc_app/constants/validators.dart';
 import 'package:nscc_app/router/routes_names.dart';
+import 'package:nscc_app/services/auth.dart';
 import 'package:nscc_app/widgets/gradient_button.dart';
 import 'package:nscc_app/widgets/login_widgets.dart';
 
@@ -86,7 +87,15 @@ class LoginScreen extends StatelessWidget {
                                 )),
                           ),
                           GradientButton(
-                            onTap: () {},
+                            onTap: () {
+                              // TODO : Email password Login
+               
+                              AuthMethods().signIn(
+                                context: context,
+                                email: _username.text,
+                                password: _password.text,
+                              );
+                            },
                             height: 30.h,
                             width: 80.w,
                             text: "Login",
