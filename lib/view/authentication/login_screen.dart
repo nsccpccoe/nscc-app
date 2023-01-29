@@ -57,8 +57,11 @@ class LoginScreen extends StatelessWidget {
                             'assets/svg/site.svg',
                             width: width * 0.6,
                           ),
+                          SizedBox(
+                            height: 25.h,
+                          ),
                           myInpField(
-                            label: "Phone number, username, or email",
+                            label: "Email",
                             controller: _username,
                             validate: MyValidators.v_name,
                           ),
@@ -90,9 +93,9 @@ class LoginScreen extends StatelessWidget {
                             gradient: AppColors.cyanGradient,
                           ),
 
-                          SizedBox(height: 10),
+                          SizedBox(height: 20.h),
                           OrLine(),
-                          SizedBox(height: 25),
+                          SizedBox(height: 25.h),
 
                           // Google and github auth widget
                           AuthIcons(),
@@ -101,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 25,
+                    height: 25.h,
                   ),
                   GestureDetector(
                     onTap: () {
@@ -111,8 +114,8 @@ class LoginScreen extends StatelessWidget {
                       alignment: Alignment.center,
                       width: width,
                       padding: EdgeInsets.symmetric(
-                        horizontal: 25,
-                        vertical: 20,
+                        horizontal: 25.w,
+                        vertical: 20.h,
                       ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
@@ -122,7 +125,7 @@ class LoginScreen extends StatelessWidget {
                         text: TextSpan(
                           children: <TextSpan>[
                             TextSpan(
-                              text: "Don't Have an account?, ",
+                              text: "Don't Have an account ?",
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                               ),
@@ -139,7 +142,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                 ],
               ),
