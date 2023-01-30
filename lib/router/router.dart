@@ -7,6 +7,7 @@ import 'package:nscc_app/view/authentication/signup_screen.dart';
 import 'package:nscc_app/view/event_details/event_screen.dart';
 import 'package:nscc_app/view/authentication/login_screen.dart';
 import 'package:nscc_app/view/authentication/signup_screen.dart';
+import 'package:nscc_app/view/event_details/festivals_screen.dart';
 import 'package:nscc_app/view/home_screen.dart';
 import 'package:nscc_app/view/registration_screen.dart';
 
@@ -40,6 +41,10 @@ class AppRoutes {
     GetPage(
       name: RoutesNames.signupScreen,
       page: () => SignupScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.festivalScreen,
+      page: () => FestivalScreen(),
     ),
     
   ];

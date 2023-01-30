@@ -6,6 +6,7 @@ import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
 import 'package:nscc_app/constants/validators.dart';
 import 'package:nscc_app/services/auth.dart';
+import 'package:nscc_app/widgets/custom_snackbar.dart';
 import 'package:nscc_app/widgets/gradient_button.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -110,13 +111,15 @@ class SignupScreen extends StatelessWidget {
                                       fullname: _fullname.text,
                                       email: _email.text,
                                       password: _password.text);
+                                    
                                 }
+                                
                               } else {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text("password Doesn't match"),
-                                  ),
-                                );
+                                // MyWidgets.showSnackbar(
+                                //     msg: "Password Doesn't match",
+                                //     context: context);
+                                // SbController.showBar(
+                                //     msg: "Password Doesn't match");
                               }
                             },
                             height: 30.h,
@@ -137,7 +140,7 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               Footer(),
-            ],  
+            ],
           ),
         ),
       ),
