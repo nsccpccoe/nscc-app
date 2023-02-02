@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nscc_app/constants/buttons.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/footer.dart';
 import 'package:nscc_app/constants/text_field.dart';
 import 'package:nscc_app/constants/text_styles.dart';
+import 'package:nscc_app/widgets/gradient_button.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({super.key});
@@ -89,11 +90,12 @@ class SignupScreen extends StatelessWidget {
                         SizedBox(
                           height: 25,
                         ),
-                        PrimaryBtn(
-                          label: "Sign Up",
-                          onpress: () {
-                            //  TODO: Login Function call
-                          },
+                        GradientButton(
+                          onTap: () {},
+                          height: 30.h,
+                          width: 80.w,
+                          text: "Sign Up",
+                          gradient: AppColors.cyanGradient,
                         ),
                       ],
                     ),
