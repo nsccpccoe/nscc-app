@@ -3,9 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:nscc_app/widgets/custom_snackbar.dart';
-// ;
 
 class AuthMethods {
+  // google sign in
   Future<void> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
     if (googleUser != null) {
@@ -26,6 +26,7 @@ class AuthMethods {
       }
     }
   }
+
 
 //sign in with email and password
 
@@ -54,6 +55,8 @@ class AuthMethods {
     }
   }
 
+
+// sign up with email and password
   Future<void> signUp(
       {required BuildContext context,
       required String fullname,
@@ -74,9 +77,5 @@ class AuthMethods {
 // Sign out method
   Future<void> signOut() async {
     await FirebaseAuth.instance.signOut();
-  }
-
-  Future<void> resetPassword(String email) async {
-    return FirebaseAuth.instance.sendPasswordResetEmail(email: email);
   }
 }

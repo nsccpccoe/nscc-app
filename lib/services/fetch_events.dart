@@ -5,9 +5,7 @@ class EventMethods {
     final String apiurl =
         "https://asia-south1-nsccpccoe.cloudfunctions.net/events";
     var response = await Dio().get(apiurl);
-
     Map<String, dynamic> result = response.data;
-
     return result;
   }
 }
