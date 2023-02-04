@@ -60,7 +60,9 @@ class EventCard extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(5.0),
           child: GradientButton(
-            onTap: () {},
+            onTap: () {
+              onpress();
+            },
             height: 30.h,
             width: 80.w,
             text: buttonLabel,
