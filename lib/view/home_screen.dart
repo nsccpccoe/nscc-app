@@ -57,6 +57,21 @@ class HomeScreen extends StatelessWidget {
                   style: MyTextStyles.poppins600,
                 ),
               ),
+              SizedBox(
+                height: 100.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(
+                    RoutesNames.updateScreen,
+                  );
+                },
+                child: GradientText(
+                  "UPDATE",
+                  gradient: AppColors.cyanGradient,
+                  style: MyTextStyles.poppins600,
+                ),
+              ),
             ],
           ),
         ),
