@@ -6,11 +6,10 @@ import 'package:nscc_app/view/authentication/auth_page.dart';
 import 'package:nscc_app/view/authentication/login_screen.dart';
 import 'package:nscc_app/view/authentication/signup_screen.dart';
 import 'package:nscc_app/view/event_details/event_screen.dart';
-import 'package:nscc_app/view/authentication/login_screen.dart';
-import 'package:nscc_app/view/authentication/signup_screen.dart';
 import 'package:nscc_app/view/event_details/festivals_screen.dart';
+import 'package:nscc_app/view/event_details/registration_screen.dart';
 import 'package:nscc_app/view/home_screen.dart';
-import 'package:nscc_app/view/registration_screen.dart';
+import 'package:nscc_app/view/update_screen.dart';
 
 class AppRoutes {
   static final routes = [
@@ -50,5 +49,10 @@ class AppRoutes {
       name: RoutesNames.festivalScreen,
       page: () => FestivalScreen(),
     ),
+      GetPage(
+      name: RoutesNames.updateScreen,
+      page: () =>UpdateScreen(),
+    ),
+    
   ];
 }

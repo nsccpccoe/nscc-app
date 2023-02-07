@@ -4,12 +4,9 @@ import 'package:get/get.dart';
 import 'package:nscc_app/constants/colors.dart';
 import 'package:nscc_app/constants/loading.dart';
 import 'package:nscc_app/constants/text_styles.dart';
-import 'package:nscc_app/controllers/auth_controller.dart';
 import 'package:nscc_app/controllers/event_controller.dart';
-import 'package:nscc_app/models/event_model.dart';
 import 'package:nscc_app/router/routes_names.dart';
 import 'package:nscc_app/services/auth.dart';
-import 'package:nscc_app/services/fetch_events.dart';
 import 'package:nscc_app/widgets/event_card.dart';
 import 'package:nscc_app/widgets/gradient_text.dart';
 import 'package:nscc_app/widgets/my_appbar.dart';
@@ -28,8 +25,6 @@ class _FestivalScreenState extends State<FestivalScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // getDataReady();
-  //  eventController.
   }
 
   @override
