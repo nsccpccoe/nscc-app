@@ -20,6 +20,7 @@ class RegistrationController extends GetxController {
   List<Fields> fields = [];
   bool isLoading = true;
   bool isRegisterLoading = false;
+  bool isRegistered = false;
 
   void updateDropDown(String value) {
     selectedValue = value;
@@ -35,12 +36,10 @@ class RegistrationController extends GetxController {
         fields.add(Fields.fromJson(item));
       }
       log(fields.length.toString());
+      await getRegistrationStatus("codehive", context);
     } catch (e) {
       log(e.toString());
       //TODO: show error snackbar
-    } finally {
-      isLoading = false;
-      update();
     }
   }
 
@@ -66,6 +65,21 @@ class RegistrationController extends GetxController {
       return false;
     } finally {
       isRegisterLoading = false;
+      update();
+    }
+  }
+
+  Future<void> getRegistrationStatus(
+      String eventId, BuildContext context) async {
+    try {
+      Map<String, dynamic> result =
+          await _service.getRegistrationStatus(eventId);
+      log(result.toString());
+      isRegistered = result["data"]["registered"];
+    } catch (e) {
+      log(e.toString());
+    } finally {
+      isLoading = false;
       update();
     }
   }

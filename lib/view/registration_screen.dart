@@ -26,7 +26,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   @override
   void initState() {
-    registrationController.getFields("webxplore", context);
+    registrationController.getFields("codehive", context);
     super.initState();
   }
 
@@ -193,7 +193,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           GradientButton(
                             onTap: () async {
                               bool res = await controller.register(
-                                  "webxplore", context);
+                                  "codehive", context);
                               if (res == true) {
                                 Get.back();
                               } else {
@@ -203,7 +203,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             },
                             height: 50.h,
                             width: 280.w,
-                            text: "Register for CodeHive Contest",
+                            text: controller.isRegistered
+                                ? "Update"
+                                : "Register for CodeHive Contest",
                             gradient: AppColors.cyanGradient,
                           ),
                           SizedBox(
