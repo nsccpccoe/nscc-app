@@ -1,7 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:nscc_app/constants/text_styles.dart';
+import 'package:nscc_app/router/routes_names.dart';
+import 'package:nscc_app/services/auth.dart';
 
 class AuthIcons extends StatelessWidget {
   const AuthIcons({super.key});
@@ -12,8 +14,14 @@ class AuthIcons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         GestureDetector(
-          onTap: () {
+          onTap: () async {
             // Google Sign In method
+            try {
+              await AuthMethods().signInWithGoogle();
+              Get.toNamed(RoutesNames.festivalScreen);
+            } catch (e) {
+              print(e.toString());
+            }
           },
           child: SvgPicture.asset(
             'assets/svg/google.svg',

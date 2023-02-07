@@ -84,3 +84,5 @@ class RegistrationController extends GetxController {
     }
   }
 }
+
+
