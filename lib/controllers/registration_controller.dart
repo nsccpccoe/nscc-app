@@ -18,3 +18,5 @@ class RegistrationController extends GetxController {
     update();
   }
 }
+
+

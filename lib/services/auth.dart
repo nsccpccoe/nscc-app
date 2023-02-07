@@ -27,7 +27,6 @@ class AuthMethods {
     }
   }
 
-
 //sign in with email and password
 
   Future<void> signIn(
@@ -40,6 +39,7 @@ class AuthMethods {
         email: email.trim(),
         password: password.trim(),
       );
+      IdTokenResult tokenResult = await user.user!.getIdTokenResult();
     } on FirebaseAuthException catch (e) {
       print(e.code);
       print(e.message);
@@ -54,7 +54,6 @@ class AuthMethods {
       }
     }
   }
-
 
 // sign up with email and password
   Future<void> signUp(
