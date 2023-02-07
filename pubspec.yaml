@@ -12,6 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_screenutil: ^5.6.0
+  url_launcher: ^6.1.9
+  flutter_exit_app: ^1.1.2
   flutter_svg: ^1.1.6
   get: ^4.6.5
   lottie: ^2.2.0
