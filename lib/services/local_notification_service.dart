@@ -6,7 +6,9 @@ class LocalNotificationServices {
       FlutterLocalNotificationsPlugin();
 
   static onDidReceiveLocalNotification(
-      int id, String? title, String? body, String? payload) async {}
+      int id, String? title, String? body, String? payload) async {
+    // Foreground Notification OnTap(IOS)
+  }
 
   static void initialize() {
     final InitializationSettings initializationSettings =
@@ -14,7 +16,12 @@ class LocalNotificationServices {
             android: AndroidInitializationSettings('@mipmap/ic_launcher'),
             iOS: DarwinInitializationSettings(
                 onDidReceiveLocalNotification: onDidReceiveLocalNotification));
-    _notificationsPlugin.initialize(initializationSettings);
+    _notificationsPlugin.initialize(
+      initializationSettings,
+      onDidReceiveNotificationResponse: (details) {
+        // Foreground Notification OnTap(Android)
+      },
+    );
   }
 
   static void display(RemoteMessage message) async {
@@ -29,6 +36,7 @@ class LocalNotificationServices {
           importance: Importance.high,
           priority: Priority.high,
         ),
+        iOS: DarwinNotificationDetails(),
       );
       await _notificationsPlugin.show(id, message.notification!.title,
           message.notification!.body, notificationDetails);
