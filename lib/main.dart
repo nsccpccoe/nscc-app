@@ -13,13 +13,7 @@ import 'services/local_notification_service.dart';
 import 'services/notification_service.dart';
 
 Future<void> backGroundMessageHandler(RemoteMessage message) async {
-  // await Firebase.initializeApp();
-  // FireStoreMethods().addNotification(
-  //   NotificationModel(
-  //       dateTime: DateTime.now(), outpassId: message.data['outpass']),
-  // );
-  log(message.notification!.title!);
-  log(message.notification!.body!);
+  // Action when background notification is received
 }
 
 void main() async {
